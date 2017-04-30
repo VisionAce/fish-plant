@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //UITabBar變顏色
         UITabBar.appearance().barTintColor = UIColor.black
         UITabBar.appearance().tintColor = UIColor.white
+    
         return true
     }
 

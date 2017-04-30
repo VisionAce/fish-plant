@@ -79,6 +79,7 @@ class ConfirmViewController: UIViewController {
             let email = snapshot.value as! String
             self.email_check.text = email
             self.email_check.isHidden = false
+            self.email_check.adjustsFontSizeToFitWidth = true //當文字超出標籤宽度时，自动调整文字大小，使其不被截断
         })
         
         ref = FIRDatabase.database().reference(withPath: "ID/\(self.uid)/Profile/Phone")
