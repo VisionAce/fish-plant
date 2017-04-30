@@ -9,6 +9,9 @@
 import UIKit
 import Firebase
 
+let userDefault = UserDefaults.standard
+let tool = Tool()
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -23,6 +26,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //UITabBar變顏色
         UITabBar.appearance().barTintColor = UIColor.black
         UITabBar.appearance().tintColor = UIColor.white
+        
+        
+        // 程式開起後判斷登入狀態，導引到對應的controller
+        let logedInState = userDefault.bool(forKey: "isLogin")
+        
+        if logedInState {
+            let viewController: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "IndexPage")
+            self.window!.rootViewController = viewController
+            
+        } else {
+            let viewController: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LogInViewControllerID")
+            self.window!.rootViewController = viewController
+        }
+        
+        
     
         return true
     }

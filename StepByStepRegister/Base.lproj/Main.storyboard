@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TzP-e5-wU5">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -40,7 +40,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eg0-fS-jCH">
-                                <rect key="frame" x="84" y="491" width="90" height="90"/>
+                                <rect key="frame" x="84" y="459" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="註冊">
@@ -51,7 +51,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ih-YC-3RD">
-                                <rect key="frame" x="201" y="490" width="90" height="90"/>
+                                <rect key="frame" x="201" y="459" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="登入">
@@ -61,9 +61,21 @@
                                     <action selector="LogIn_Button_Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fbv-Z7-6Y6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTn-82-dgz">
+                                <rect key="frame" x="139" y="543" width="103" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="忘記密碼？">
+                                    <color key="titleColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="iUn-fZ-Hzg" kind="show" id="dON-v9-04o"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.42432972099999999" green="1" blue="0.52536956440000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="7ks-Uw-Xhu"/>
                     <connections>
                         <outlet property="Email" destination="IwE-G7-Dh0" id="qO2-2y-kgg"/>
                         <outlet property="Password" destination="4Ym-0L-jfp" id="SdK-R1-gvb"/>
@@ -72,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130" y="75"/>
+            <point key="canvasLocation" x="65" y="54"/>
         </scene>
         <!--Confirm View Controller-->
         <scene sceneID="rGz-pS-QU9">
@@ -205,7 +217,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3DC-lu-voG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="128.80000000000001" y="721.88905547226398"/>
+            <point key="canvasLocation" x="65" y="704"/>
         </scene>
         <!--Change Data View Controller-->
         <scene sceneID="Nc7-wO-xwv">
@@ -274,7 +286,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DLt-Qj-Wcy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="785" y="722"/>
+            <point key="canvasLocation" x="780" y="704"/>
         </scene>
         <!--燈光控制-->
         <scene sceneID="8uw-Sj-nTD">
@@ -438,10 +450,10 @@
             </objects>
             <point key="canvasLocation" x="1441" y="2459"/>
         </scene>
-        <!--設定-->
+        <!--Setting View Controller-->
         <scene sceneID="hdC-5z-EbK">
             <objects>
-                <viewController id="QYC-8x-g0u" sceneMemberID="viewController">
+                <viewController id="QYC-8x-g0u" customClass="SettingViewController" customModule="StepByStepRegister" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nV5-Rz-cCA"/>
                         <viewControllerLayoutGuide type="bottom" id="2Tt-SK-Ziz"/>
@@ -450,8 +462,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rzJ-Q4-zsH">
+                                <rect key="frame" x="158" y="522" width="58" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="登出">
+                                    <color key="titleColor" red="0.90272830309999996" green="0.1227961806" blue="0.29529760560000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutA:" destination="QYC-8x-g0u" eventType="touchUpInside" id="FDE-cD-sMs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUJ-T1-dQe">
+                                <rect key="frame" x="98" y="376" width="179" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="更改/新增Arduino id">
+                                    <color key="titleColor" red="1" green="0.167750338" blue="0.19048430790000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="tfY-4w-CsK" kind="show" id="9nL-4G-Z5w"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plant" translatesAutoresizingMaskIntoConstraints="NO" id="9Lp-ly-QFa">
+                                <rect key="frame" x="40" y="151" width="294" height="156"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6yl-h4-31d">
-                                <rect key="frame" x="140" y="387" width="94" height="37"/>
+                                <rect key="frame" x="140" y="452" width="94" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="更改資料">
@@ -461,37 +499,123 @@
                                     <segue destination="BvR-qf-C0U" kind="show" id="RFh-pT-Xvi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rzJ-Q4-zsH">
-                                <rect key="frame" x="158" y="440" width="58" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="登出">
-                                    <color key="titleColor" red="0.90272830309999996" green="0.1227961806" blue="0.29529760560000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="o1H-BQ-ET5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUJ-T1-dQe">
-                                <rect key="frame" x="116" y="339" width="143" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="更改Arduino id">
-                                    <color key="titleColor" red="1" green="0.167750338" blue="0.19048430790000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plant" translatesAutoresizingMaskIntoConstraints="NO" id="9Lp-ly-QFa">
-                                <rect key="frame" x="40" y="140" width="294" height="156"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.4562505880385811" green="0.7857833493391656" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="設定" image="setting" id="ggr-tN-V1Z"/>
+                    <navigationItem key="navigationItem" id="dzd-NK-y9h"/>
+                    <connections>
+                        <outlet property="logoutB" destination="rzJ-Q4-zsH" id="yhy-Dl-7AF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Rs-nD-CkQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1440.8" y="3123.6881559220392"/>
+            <point key="canvasLocation" x="1440.8" y="3112.8935532233886"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Rco-tz-Bcb">
+            <objects>
+                <viewController id="iUn-fZ-Hzg" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hYj-LL-OWn"/>
+                        <viewControllerLayoutGuide type="bottom" id="eeb-35-deE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ui0-1o-cD1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="信箱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wjI-u0-BH7">
+                                <rect key="frame" x="62" y="219" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="電話" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHg-DD-Ifu">
+                                <rect key="frame" x="62" y="296" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mGW-gw-UHc">
+                                <rect key="frame" x="112" y="214" width="200" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zg1-nL-xAy">
+                                <rect key="frame" x="112" y="291" width="200" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7P-Gz-hXh">
+                                <rect key="frame" x="141" y="395" width="93" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="找回密碼">
+                                    <color key="titleColor" red="1" green="0.167750338" blue="0.19048430790000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.42432972099999999" green="1" blue="0.52536956440000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oya-9r-N8Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="780" y="54"/>
+        </scene>
+        <!--Arduino Id View Controller-->
+        <scene sceneID="cAl-Hb-I92">
+            <objects>
+                <viewController id="tfY-4w-CsK" customClass="ArduinoIdViewController" customModule="StepByStepRegister" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ezM-KA-VqO"/>
+                        <viewControllerLayoutGuide type="bottom" id="iUE-CK-tZZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tby-WI-PQh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sG2-AG-Mbx">
+                                <rect key="frame" x="87" y="318" width="200" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arduino1" translatesAutoresizingMaskIntoConstraints="NO" id="dGj-5y-WX0">
+                                <rect key="frame" x="44" y="415" width="290" height="154"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="請輸入Arduino id" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKu-tc-1XC">
+                                <rect key="frame" x="59" y="82" width="257" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arduino-logo-circle-thumb" translatesAutoresizingMaskIntoConstraints="NO" id="Jbf-2V-zHX">
+                                <rect key="frame" x="112" y="147" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tns-6V-YJh">
+                                <rect key="frame" x="160" y="356" width="55" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="確認">
+                                    <color key="titleColor" red="1" green="0.167750338" blue="0.19048430790000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.45625058800000001" green="0.78578334930000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bE5-4b-V3G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2326" y="3113"/>
         </scene>
         <!--即時資訊-->
         <scene sceneID="hwE-fW-8wR">
@@ -631,7 +755,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="viU-DL-mba">
             <objects>
-                <tabBarController id="0AT-qH-Y3O" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="IndexPage" id="0AT-qH-Y3O" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="BB7-7q-R9r">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -641,12 +765,12 @@
                         <segue destination="bPZ-5m-Duj" kind="relationship" relationship="viewControllers" id="Vb0-Qj-7GC"/>
                         <segue destination="6fq-lR-hg9" kind="relationship" relationship="viewControllers" id="0cM-a3-Ezg"/>
                         <segue destination="c6D-OV-ok8" kind="relationship" relationship="viewControllers" id="uIN-F6-ZIw"/>
-                        <segue destination="QYC-8x-g0u" kind="relationship" relationship="viewControllers" id="gJg-ES-DmG"/>
+                        <segue destination="paO-re-LCu" kind="relationship" relationship="viewControllers" id="gJg-ES-DmG"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2d9-aK-sjT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="129" y="1451"/>
+            <point key="canvasLocation" x="65" y="1432"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="Vac-Nt-eSp">
@@ -757,10 +881,49 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uDs-h9-Zir" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="786" y="74"/>
+            <point key="canvasLocation" x="1441" y="54"/>
+        </scene>
+        <!--設定-->
+        <scene sceneID="YYI-PS-lIN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="paO-re-LCu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="設定" image="setting" id="ggr-tN-V1Z"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="amO-FD-Bbu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QYC-8x-g0u" kind="relationship" relationship="rootViewController" id="San-1R-8Bt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wto-H6-uhQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="631" y="3113"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="weF-af-zyV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TzP-e5-wU5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lky-w1-6H0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bpD-Eg-xJc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QKo-yq-lih" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-662" y="54"/>
         </scene>
     </scenes>
     <resources>
+        <image name="arduino-logo-circle-thumb" width="600" height="600"/>
+        <image name="arduino1" width="620" height="400"/>
         <image name="bright-7" width="29" height="30"/>
         <image name="depositphotos_96004564-Color-illustration-of-people-care" width="170" height="170"/>
         <image name="facebook" width="30" height="30"/>

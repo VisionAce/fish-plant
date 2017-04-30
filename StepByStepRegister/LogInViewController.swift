@@ -104,6 +104,10 @@ class LogInViewController: UIViewController {
                         self.uid = user.uid
                     }
                     
+                    //判斷是否為登入狀態
+                    userDefault.set(true, forKey: "isLogin")
+                    userDefault.synchronize()
+                    
                     // Online-Status 是線上狀態，在點選「登入」按鈕後，將Online-Status設定為On
                     FIRDatabase.database().reference(withPath: "Online-Status/\(self.uid)").setValue("ON")
                     

@@ -15,6 +15,8 @@
 		048F31081E433ECB007B579D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048F31061E433ECB007B579D /* Main.storyboard */; };
 		048F310A1E433ECB007B579D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048F31091E433ECB007B579D /* Assets.xcassets */; };
 		048F310D1E433ECB007B579D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048F310B1E433ECB007B579D /* LaunchScreen.storyboard */; };
+		277DBB551EB64BA800BB3895 /* ArduinoIdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277DBB541EB64BA800BB3895 /* ArduinoIdViewController.swift */; };
+		277DBB571EB654EE00BB3895 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277DBB561EB654EE00BB3895 /* SettingViewController.swift */; };
 		27C70B3A1EB5EDF600EF6C31 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27C70B391EB5EDF600EF6C31 /* GoogleService-Info.plist */; };
 		27C70B3C1EB5F04400EF6C31 /* Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C70B3B1EB5F04400EF6C31 /* Tool.swift */; };
 		27C70B3E1EB5F0B500EF6C31 /* InstantInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C70B3D1EB5F0B500EF6C31 /* InstantInformationViewController.swift */; };
@@ -35,6 +37,8 @@
 		048F310C1E433ECB007B579D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		048F310E1E433ECB007B579D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22BBA07A53056B60F23BA4E6 /* Pods_StepByStepRegister.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StepByStepRegister.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		277DBB541EB64BA800BB3895 /* ArduinoIdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArduinoIdViewController.swift; sourceTree = "<group>"; };
+		277DBB561EB654EE00BB3895 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		27C70B391EB5EDF600EF6C31 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		27C70B3B1EB5F04400EF6C31 /* Tool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tool.swift; sourceTree = "<group>"; };
 		27C70B3D1EB5F0B500EF6C31 /* InstantInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstantInformationViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 				27C70B3D1EB5F0B500EF6C31 /* InstantInformationViewController.swift */,
 				27C70B3F1EB5F0F500EF6C31 /* LightViewController.swift */,
 				27C70B411EB5F13E00EF6C31 /* FansViewcontroller.swift */,
+				277DBB561EB654EE00BB3895 /* SettingViewController.swift */,
+				277DBB541EB64BA800BB3895 /* ArduinoIdViewController.swift */,
 				048F31061E433ECB007B579D /* Main.storyboard */,
 				048F31091E433ECB007B579D /* Assets.xcassets */,
 				048F310B1E433ECB007B579D /* LaunchScreen.storyboard */,
@@ -238,7 +244,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				044FE50B1E4480D700A7B5F5 /* ConfirmViewController.swift in Sources */,
+				277DBB571EB654EE00BB3895 /* SettingViewController.swift in Sources */,
 				044FE5091E4480B700A7B5F5 /* ChangeDataViewController.swift in Sources */,
+				277DBB551EB64BA800BB3895 /* ArduinoIdViewController.swift in Sources */,
 				048F31051E433ECB007B579D /* SignUpViewController.swift in Sources */,
 				27C70B421EB5F13E00EF6C31 /* FansViewcontroller.swift in Sources */,
 				27C70B401EB5F0F500EF6C31 /* LightViewController.swift in Sources */,
